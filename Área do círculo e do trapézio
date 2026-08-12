@@ -1,5 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#define pi 3.141592
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	float area, raio;
+	
+	printf ("Insira o raio do circulo");
+	scanf ("%f", &raio);
+	
+	area = pi*(raio*raio);
+	
+	printf ("A Area do circulo de raio %f = %f" , raio, area);
+		return 0;
+	
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -12,6 +34,5 @@ int main(int argc, char *argv[]) {
     printf ("A ara do trapezio é: %f" , areat);
 
     return 0;
-	
-	
+		
 }
