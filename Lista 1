@@ -1,0 +1,103 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+ // 1ex
+  int primeiro, segundo, aux;
+  printf("Insira o primeiro valor: ");
+  scanf("%d", &primeiro);
+  printf("Insira o segundo valor: ");
+  scanf("%d", &segundo);
+    aux = primeiro;
+    primeiro = segundo; 
+    segundo = aux;
+  printf("%d\n%d\n", primeiro, segundo);
+  printf("\n\n");
+  
+ // 2ex
+   double valor;
+   printf ("Primeiro valor: ");
+   scanf ("%lf", &valor);
+   printf ("Valor em notacao: %e\n", valor);
+  
+ // 3ex
+   int n, binario[7], i = 0;
+   printf("\nInsira um numero: ");
+   scanf("%d", &n);
+   while (n > 0) {
+     binario[i] = n % 2;
+     n = n / 2;
+     i++; 
+   }
+   printf("Em binario: ");
+   for (i = i - 1; i >= 0; i--) {
+     printf("%d", binario[i]);
+   }
+   printf("\n");
+ 
+ // 4ex
+  double salario, vendas, comissao, total;
+  printf("\nInsira o valor do salario: ");
+  scanf("%lf", &salario);
+  printf("Insira o valor das vendas: ");
+  scanf("%lf", &vendas);
+    comissao = vendas * 0.15;
+    total = salario + comissao;
+  printf("Total a receber no mes: R$ %.2lf\n", total);
+ 
+ // 5ex
+  double valor1, valor2, valor3, valor4;
+  double soma, media, produto;
+  printf("\nInsira o primeiro valor: ");
+  scanf("%lf", &valor1);
+  printf("Insira o segundo valor: ");
+  scanf("%lf", &valor2);
+  printf("Insira o terceiro valor: ");
+  scanf("%lf", &valor3);
+  printf("Insira o quarto valor: ");
+  scanf("%lf", &valor4);
+    soma = valor1 + valor2 + valor3 + valor4;
+    media = soma / 4;
+    produto = valor1 * valor2 * valor3 * valor4;
+  printf("\nSoma: %.2lf", soma);
+  printf("\nMedia: %.2lf", media);
+  printf("\nProduto: %2.lf\n", produto);
+  
+  // 6 ex
+   int dias, meses, anos, resto;
+   printf("\nInsira a idade em dias: ");
+   scanf("%d", &dias);
+	 anos = dias / 365;
+	 resto = dias % 365;
+	 meses = resto / 30;
+	 dias = resto % 30;
+   printf("Ano(s): %d\n", anos);
+   printf("Mes(es): %d\n", meses);
+   printf("%Dia(s): %d\n", dias);
+  
+  // 7ex
+   double raio, volume;
+   printf("\nInsira o valor do raio da esfera: ");
+   scanf("%lf", &raio);
+     volume = (4.0 / 3.0) * 3.14159 * raio * raio * raio;
+   printf("Volume: %.3lf\n", volume);
+
+  // 8ex
+   double x1, y1, x2, y2, distancia;
+   printf("\nInsira o valor de x1: ");
+   scanf("%lf", &x1);
+   printf("Insira o valor de y1: ");
+   scanf("%lf", &y1);
+   printf("Insira o valor de x2: ");
+   scanf("%lf", &x2);
+   printf("Insira o valor de y2: ");
+   scanf("%lf", &y2);
+     distancia = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+   printf("A distancia euclidiana entre eles: %.4lf\n", distancia);
+
+return 0;
+}
