@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+ // 1ex
+   int idade, anoatual, anonascimento;
+   printf("\nInsira a idade: ");
+   scanf("%d", &idade);
+   printf("Insira o ano atual: ");
+   scanf("%d", &anoatual);
+      anonascimento = anoatual - idade;
+   printf("Ano de nascimento: %d\n", anonascimento);
+   
+ // 2ex
+   float kmh, ms; 
+   printf("\nInsira uma velocidade em km/h: ");
+   scanf("%f", &kmh);
+      ms = kmh / 3.6;
+   printf("Velocidade em m/s: %.2fl\n", ms);
+   
+ // 3ex
+   float reais, dolares, cotacao;
+   printf("\nInsira o valor em reais: ");
+   scanf("%f", &reais);
+   printf("Digite a cotacao do dolar: ");
+   scanf("%f", &cotacao);
+      dolares = reais / cotacao;
+   printf("Valor em dolares: %.2f\n", dolares);
+   
+ // 4ex
+   float c, f;
+   printf("\nInsira uma temperatura em Celsius: ");
+   scanf("%f", &c);
+      f = c * (9.0 / 5.0) + 32.0;
+   printf("A temperatura em Fahrenheit: %.2f\n", f);
+ 
+ // 5ex
+   float graus, radianos;
+   printf("\nInsira um angulo em graus: ");
+   scanf("%f", &graus);
+      radianos = graus * 3.141592 / 180;
+   printf("O angulo em radianos: %.2f\n", radianos);
+  
+  // 6 ex
+    int numero, antecessor, sucessor;
+    printf("\nInsira um numero inteiro: ");
+    scanf("%d", &numero);
+       antecessor = numero - 1;
+       sucessor = numero + 1;
+    printf("Antecessor: %d\n", antecessor);
+    printf("Sucessor: %d\n", sucessor);
+  
+  // 7ex
+    float total, primeiro, segundo, terceiro;  
+	   total = 780000.0;
+       primeiro = total * 0.46;
+       segundo = total * 0.32;
+       terceiro = total - primeiro - segundo;
+    printf("\nPrimeiro ganhador: R$%.2f", primeiro);
+    printf("Segundo ganhador: R$%.2f", segundo);
+    printf("Terceiro ganhador: R$%.2f\n", terceiro);
+   
+  // 8ex
+    int tempo, horas, minutos, segundos;
+    printf("\nInsira o tempo de duracao em segundos: ");
+    scanf("%d", &tempo);
+       horas = tempo / 3600;
+       tempo = tempo % 3600;
+       minutos = tempo / 60;
+       segundos = tempo % 60;
+    printf("Tempo: %02d:%02d:02d\n", horas, minutos, segundos);
+    
+  // 9ex
+    float tempoviagem, velocidade, distancia, litros;
+    printf("\nInsira o tempo da viagem em horas: ");
+    scanf("%f", &tempoviagem);
+    printf("Insira a velocidade media em km/h: ");
+    scanf("%f", &velocidade);
+       distancia = tempoviagem * velocidade;
+       litros = distancia / 12;
+    printf("Distancia percorrida: %.3f\n", distancia);
+    printf("Litros de combustivel gastos: %.3f\n", litros);
+   
+   // 10ex
+     int num1, num2, num3, maiorAB, maiorfinal;
+     printf("\nInsira tres valores inteiros: ");
+     scanf("%d %d %d", &num1, &num2, &num3);
+        maiorAB = (num1 + num2 + abs(num1 - num2)) / 2;
+        maiorfinal = (maiorAB + num3 + abs(maiorAB - num3)) / 2;
+     printf("\n%d eh o maior\n", maiorfinal);
+     
+return 0;
+}
