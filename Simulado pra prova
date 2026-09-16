@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+  // ex1
+  int A, B, C, D, aux;
+  printf ("Digite o valor de A: ");
+  scanf ("%d", &A);
+  printf ("Digite o valor de B: ");
+  scanf ("%d", &B);
+  printf ("Digite o valor de C: ");
+  scanf ("%d", &C);
+  printf ("Digite o valor de D: ");
+  scanf ("%d", &D);
+  
+  aux = A;
+  A= C;
+  C= D;
+  D= B;
+  B= aux;
+  
+  printf ("\nA nova ordem C,A,D,B fica: %d, %d, %d, %d\n", A, B, C, D);
+  
+  //ex2
+  float valor, quantidade, preco, VPA, PVP;
+  printf ("\nDigite o valor patrimonial da empresa: ");
+  scanf ("%f", &valor);
+  printf ("Digite a quantidade de acoes: ");
+  scanf ("%f", &quantidade);
+  printf ("Digite o preco atual da acao: ");
+  scanf ("%f", &preco);
+  
+  VPA = valor / quantidade;
+  PVP = preco / VPA;
+  printf ("\nVPA: %2.f", VPA);
+  printf ("\nP/VPA: %2.f", PVP);
+  
+  if (PVP <0.0) {
+  	printf ("\nA classificacao: pessima");
+  }
+  else if (PVP <0.8) {
+  	printf ("\nA classificacao: otima");
+  }
+  else if (PVP <=1.2) {
+  	printf ("\nA classificacao: indiferente");
+  }
+  else if (PVP <=2.0) {
+  	printf ("\nA classificacao: boa");
+  }
+  else {
+  	printf ("\nClassificacao ruim");
+  }
+	return 0;
+}
