@@ -1,0 +1,475 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void ADSIS();
+void MA();
+void MB();
+
+int main(int argc, char *argv[]) {
+
+    int prova;
+
+    printf("MENU DE PROVAS\n");
+    printf("1 - ADSIS\n");
+    printf("2 - MA\n");
+    printf("3 - MB\n");
+    printf("Escolha a prova: ");
+    scanf("%d", &prova);
+
+    switch (prova) {
+
+        case 1:
+            ADSIS();
+            break;
+
+        case 2:
+            MA();
+            break;
+
+        case 3:
+            MB();
+            break;
+
+        default:
+            printf("Prova invalida.");
+    }
+
+    return 0;
+}
+
+
+void ADSIS() {
+
+    int questao;
+
+    printf("\nADSIS\n");
+    printf("0 - EX0\n");
+    printf("1 - EX1\n");
+    printf("2 - EX2\n");
+    printf("Escolha o exercicio: ");
+    scanf("%d", &questao);
+
+    switch (questao) {
+
+       
+        case 0: {
+
+            int n1, n2, n3, n4, n5;
+
+            printf("Digite o primeiro numero: ");
+            scanf("%d", &n1);
+
+            printf("Digite o segundo numero: ");
+            scanf("%d", &n2);
+
+            printf("Digite o terceiro numero: ");
+            scanf("%d", &n3);
+
+            printf("Digite o quarto numero: ");
+            scanf("%d", &n4);
+
+            printf("Digite o quinto numero: ");
+            scanf("%d", &n5);
+
+            if (n2 == n1 + 1) {
+                printf("%d e %d sao consecutivos\n", n1, n2);
+            }
+
+            if (n3 == n2 + 1) {
+                printf("%d e %d sao consecutivos\n", n2, n3);
+            }
+
+            if (n4 == n3 + 1) {
+                printf("%d e %d sao consecutivos\n", n3, n4);
+            }
+
+            if (n5 == n4 + 1) {
+                printf("%d e %d sao consecutivos\n", n4, n5);
+            }
+
+            break;
+        }
+
+
+        case 1: {
+
+            float peso, altura, imc;
+
+            printf("\nDigite seu peso em kg: ");
+            scanf("%f", &peso);
+
+            printf("Digite sua altura em metros: ");
+            scanf("%f", &altura);
+
+            imc = peso / (altura * altura);
+
+            printf("Seu IMC e: %.2f\n", imc);
+
+            if (imc < 18.5) {
+                printf("Classificacao: Abaixo do peso");
+            }
+            else if (imc <= 24.9) {
+                printf("Classificacao: Normal");
+            }
+            else if (imc <= 29.9) {
+                printf("Classificacao: Acima do peso");
+            }
+            else {
+                printf("Classificacao: Obeso");
+            }
+
+            break;
+        }
+
+
+        case 2: {
+
+            int A = 6;
+            int B = 0;
+            int C = 0;
+
+            printf("\nInicio: A = %d, B = %d, C = %d\n", A, B, C);
+
+            A = A - 1;
+            C = C + 1;
+            printf("A -> C: A = %d, B = %d, C = %d\n", A, B, C);
+
+            A = A - 2;
+            B = B + 2;
+            printf("A -> B: A = %d, B = %d, C = %d\n", A, B, C);
+
+            C = C - 1;
+            B = B + 1;
+            printf("C -> B: A = %d, B = %d, C = %d\n", A, B, C);
+
+            A = A - 3;
+            C = C + 3;
+            printf("A -> C: A = %d, B = %d, C = %d\n", A, B, C);
+
+            B = B - 1;
+            A = A + 1;
+            printf("B -> A: A = %d, B = %d, C = %d\n", A, B, C);
+
+            B = B - 2;
+            C = C + 2;
+            printf("B -> C: A = %d, B = %d, C = %d\n", A, B, C);
+
+            A = A - 1;
+            C = C + 1;
+            printf("A -> C: A = %d, B = %d, C = %d\n", A, B, C);
+
+            break;
+        }
+
+
+        default:
+            printf("Exercicio invalido.");
+    }
+}
+
+
+void MA() {
+
+    int questao;
+
+    printf("\nMA\n");
+    printf("0 - EX0\n");
+    printf("1 - EX1\n");
+    printf("2 - EX2\n");
+    printf("Escolha o exercicio: ");
+    scanf("%d", &questao);
+
+    switch (questao) {
+
+       
+        case 0: {
+
+            int num1, num2, num3, num4;
+
+            printf("\nDigite o primeiro numero: ");
+            scanf("%d", &num1);
+
+            printf("Digite o segundo numero: ");
+            scanf("%d", &num2);
+
+            printf("Digite o terceiro numero: ");
+            scanf("%d", &num3);
+
+            printf("Digite o quarto numero: ");
+            scanf("%d", &num4);
+
+            printf("Numeros impares:\n");
+
+            if (num1 % 2 != 0) {
+                printf("%d\n", num1);
+            }
+
+            if (num2 % 2 != 0) {
+                printf("%d\n", num2);
+            }
+
+            if (num3 % 2 != 0) {
+                printf("%d\n", num3);
+            }
+
+            if (num4 % 2 != 0) {
+                printf("%d\n", num4);
+            }
+
+            printf("Multiplos de 5:\n");
+
+            if (num1 % 5 == 0) {
+                printf("%d\n", num1);
+            }
+
+            if (num2 % 5 == 0) {
+                printf("%d\n", num2);
+            }
+
+            if (num3 % 5 == 0) {
+                printf("%d\n", num3);
+            }
+
+            if (num4 % 5 == 0) {
+                printf("%d\n", num4);
+            }
+
+            break;
+        }
+
+
+        case 1: {
+
+            int capacidade, qtd_itens, n_mochilas, resto;
+
+            printf("\nInsira a quantidade de itens a serem dispostos nas mochilas: \n");
+            scanf("%d",&qtd_itens);
+
+            printf("Insira a capacidade de itens de cada mochila: \n");
+            scanf("%d",&capacidade);
+
+            n_mochilas = qtd_itens/capacidade;
+            resto = qtd_itens%capacidade;
+
+            printf("Legendario, sao %d mochilas para seus itens, e sobram %d itens\n", n_mochilas, resto);
+
+            break;
+        }
+
+
+        case 2: {
+
+            float valor, resultado;
+            int codigo;
+
+            printf("Digite o valor a ser convertido: ");
+            scanf("%f", &valor);
+
+            printf("Digite o codigo da unidade: ");
+            scanf("%d", &codigo);
+
+            if (codigo == 1) {
+                resultado = valor * 1.8 + 32;
+                printf("Resultado: %.2f F", resultado);
+            }
+
+            else if (codigo == 2) {
+                resultado = valor + 273.15;
+                printf("Resultado: %.2f K", resultado);
+            }
+
+            else if (codigo == 3) {
+                resultado = valor - 273.15;
+                printf("Resultado: %.2f C", resultado);
+            }
+
+            else if (codigo == 4) {
+                resultado = valor / 1609.34;
+                printf("Resultado: %.2f mi", resultado);
+            }
+
+            else if (codigo == 5) {
+                resultado = valor * 1609.34;
+                printf("Resultado: %.2f m", resultado);
+            }
+
+            else if (codigo == 8) {
+                resultado = valor * 2.205;
+                printf("Resultado: %.2f lb", resultado);
+            }
+
+            else if (codigo == 9) {
+                resultado = valor / 2.205;
+                printf("Resultado: %.2f kg", resultado);
+            }
+
+            else if (codigo == 10) {
+                resultado = valor / 1.609;
+                printf("Resultado: %.2f mph", resultado);
+            }
+
+            else if (codigo == 11) {
+                resultado = valor * 1.609;
+                printf("Resultado: %.2f km/h", resultado);
+            }
+
+            else {
+                printf("Unidade invalida");
+            }
+
+            break;
+        }
+
+
+        default:
+            printf("Exercicio invalido.");
+    }
+}
+
+
+void MB() {
+
+    int questao;
+
+    printf("\nMB\n");
+    printf("0 - EX0\n");
+    printf("1 - EX1\n");
+    printf("2 - EX2\n");
+    printf("Escolha o exercicio: ");
+    scanf("%d", &questao);
+
+    switch (questao) {
+
+        
+        case 0: {
+
+            int itens, capacid;
+            int mochilas, sobra;
+
+            printf("\nDigite a quantidade total de itens: ");
+            scanf("%d", &itens);
+
+            printf("Digite a capacidade de cada mochila: ");
+            scanf("%d", &capacid);
+
+            mochilas = itens / capacid;
+            sobra = itens % capacid;
+
+            printf("Mochilas totalmente preenchidas: %d\n", mochilas);
+            printf("Itens que sobraram: %d\n", sobra);
+
+            break;
+        }
+
+
+        case 1: {
+
+            int a, b, c;
+
+            printf("\nDigite o valor de a: ");
+            scanf("%d", &a);
+
+            printf("Digite o valor de b: ");
+            scanf("%d", &b);
+
+            printf("Digite o valor de c: ");
+            scanf("%d", &c);
+
+            if (a == b || a == c || b == c) {
+                printf("Os numeros tem que ser distintos");
+            }
+
+            else if (a < b && b < c) {
+                printf("%d %d %d", a, b, c);
+            }
+
+            else if (a < c && c < b) {
+                printf("%d %d %d", a, c, b);
+            }
+
+            else if (b < a && a < c) {
+                printf("%d %d %d", b, a, c);
+            }
+
+            else if (b < c && c < a) {
+                printf("%d %d %d", b, c, a);
+            }
+
+            else if (c < a && a < b) {
+                printf("%d %d %d", c, a, b);
+            }
+
+            else {
+                printf("%d %d %d", c, b, a);
+            }
+
+            break;
+        }
+
+
+        case 2: {
+
+            int valor1, valor2, codigox;
+
+            printf("\nDigite o primeiro valor: ");
+            scanf("%d", &valor1);
+
+            printf("Digite o segundo valor: ");
+            scanf("%d", &valor2);
+
+            printf("Digite o codigo da operacao: ");
+            scanf("%d", &codigox);
+
+            if (codigox == 1) {
+
+                if (valor1 > valor2) {
+                    printf("Verdadeiro");
+                }
+                else {
+                    printf("Falso");
+                }
+            }
+
+            else if (codigox == 2) {
+
+                if (valor1 < valor2) {
+                    printf("Verdadeiro");
+                }
+                else {
+                    printf("Falso");
+                }
+            }
+
+            else if (codigox == 3) {
+
+                if (valor1 == valor2) {
+                    printf("Verdadeiro");
+                }
+                else {
+                    printf("Falso");
+                }
+            }
+
+            else if (codigox == 4) {
+
+                if (valor1 != valor2) {
+                    printf("Verdadeiro");
+                }
+                else {
+                    printf("Falso");
+                }
+            }
+
+            else {
+                printf("Operador invalido");
+            }
+
+            break;
+        }
+
+
+        default:
+            printf("Exercicio invalido.");
+    }
+
+}
