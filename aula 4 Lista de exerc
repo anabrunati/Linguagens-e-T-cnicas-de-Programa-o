@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* lista de exercicios */
+
+int main(int argc, char *argv[]) {
+
+ // Exercicio1
+   /*elabore um programa que permita a entrada de 3 valores. e conte do 
+	 primeiro valor inserido, até o segundo valor, com o passo da contagem
+	 dado pelo terceiro valor (ex: 1,8,2 >> contar de 1 a 8, com passo 2 = 3,5,7*/
+	int inicio, fim, passo, i;
+
+	printf ("Insira o primeiro valor: ");
+	scanf ("%d", &inicio);
+	printf ("Insira o segundo valor: ");
+	scanf ("%d", &fim);
+	printf ("Insira o passo: ");
+	scanf ("%d", &passo);
+	
+	for (i= inicio+passo; i<fim; i= i+passo){
+		printf ("%d\n", i);
+	}
+	
+ // Exercicio2
+   /*faça um programa que receba um número n e realize a soma dos n primeiros
+	 termos da sequência definida como [S= 1/2; 1/4; 1/8; 1/16... N] */
+	int n, j;
+	float termo = 0.5, soma =0;
+	
+	printf ("\nInsira o valor de n: ");
+	scanf ("%d", &n);
+	
+	for (j=1; j<=n; j++){
+		soma = soma + termo;
+		termo = termo/2;
+	}
+	printf ("Soma = %.4f", soma);
+	
+ // Exercicio3
+   /*crie um programa que exiba na tela, o triângulo de pascal*/
+   printf("Digite a quantidade de linhas: ");
+    int m, u, k, valor;
+	scanf("%d", &n);
+
+    for (u = 0; u < m; u++) {
+        valor = 1;
+
+        for (k = 0; k <= u; k++) {
+            printf("%d ", valor);
+            valor = valor * (u - k) / (k + 1);
+        }
+        printf("\n");
+    }
+   
+	
+	return 0;
+}
